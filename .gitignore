@@ -1,0 +1,24 @@
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Root local files
+cookies.txt
+
+# Frontend
+portfolio-web/react-portfolio-web-main/node_modules/
+portfolio-web/react-portfolio-web-main/dist/
+portfolio-web/react-portfolio-web-main/.env
+
+# Backend
+portfolio-app-server-main/target/
+portfolio-app-server-main/.env
+portfolio-app-server-main/uploads/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

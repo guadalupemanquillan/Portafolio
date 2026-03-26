@@ -1,0 +1,31 @@
+# Git
+.git
+.gitignore
+
+# Maven
+target/
+!target/guadalupe-portfolio-0.0.1-SNAPSHOT.jar
+
+# IDE
+.vscode/
+.idea/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Environment files
+.env
+.env.local
+.env.production
+
+# Documentation
+README.md
+*.md
+
+# Backup files
+backup/
