@@ -96,8 +96,10 @@ export const Formacion = () => {
   const fetchFormaciones = () =>
     getFormaciones()
       .then((data) => {
-        const sorted = sortFormaciones(data || []);
-        setStudies(sorted);
+        console.log("FORMACIONES BACKEND:", data);
+        const base = Array.isArray(data) ? data : [];
+        const sorted = sortFormaciones(base);
+        setStudies(sorted.length ? sorted : sortFormaciones(MOCK_FORMACION));
       })
       .catch((err) => {
         console.error("Error cargando formación", err);

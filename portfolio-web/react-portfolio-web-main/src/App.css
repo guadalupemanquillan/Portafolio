@@ -1974,3 +1974,62 @@ html {
   .stack-icon { width: 40px; height: 40px; }
   .stack-icon img { width: 28px; height: 28px; }
 }
+
+
+/* FIX visibilidad secciones backend */
+.experience,
+.education,
+.skills {
+  min-height: auto !important;
+  height: auto !important;
+  overflow: visible !important;
+}
+
+.experience-grid,
+.education-timeline,
+.stack-grid {
+  opacity: 1 !important;
+  visibility: visible !important;
+  min-height: auto !important;
+  height: auto !important;
+  overflow: visible !important;
+}
+
+.experience-card,
+.education-item,
+.education-content,
+.stack-item {
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block;
+}
+
+.experience-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.education-timeline {
+  display: flex !important;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.education-item,
+.education-item.right,
+.education-item.left {
+  width: 100% !important;
+  left: auto !important;
+  right: auto !important;
+  transform: none !important;
+}
+
+.education-content,
+.education-item.right .education-content,
+.education-item.left .education-content {
+  margin: 0 !important;
+  width: 100% !important;
+}

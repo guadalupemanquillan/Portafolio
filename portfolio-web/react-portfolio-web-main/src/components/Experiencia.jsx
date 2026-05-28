@@ -111,8 +111,10 @@ export const Experiencia = () => {
   const fetchExperiencias = () =>
     getExperiencias()
       .then((data) => {
-        const sorted = sortExperiences(data || []);
-        setExperiences(sorted);
+        console.log("EXPERIENCIAS BACKEND:", data);
+        const base = Array.isArray(data) ? data : [];
+        const sorted = sortExperiences(base);
+        setExperiences(sorted.length ? sorted : sortExperiences(MOCK_EXPERIENCES));
       })
       .catch((err) => {
         console.error("Error cargando experiencias", err);
