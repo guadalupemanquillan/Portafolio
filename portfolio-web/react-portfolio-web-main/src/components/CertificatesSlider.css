@@ -50,11 +50,10 @@
 }
 
 .certificates-track--static {
-  animation: none;
-  flex-wrap: wrap;
-  width: 100%;
-  justify-content: center;
-  gap: 1.25rem;
+  animation: certificates-scroll 32s linear infinite !important;
+  flex-wrap: nowrap !important;
+  width: max-content !important;
+  justify-content: flex-start !important;
 }
 
 .certificate-card {
@@ -163,9 +162,38 @@
 
 @media (prefers-reduced-motion: reduce) {
   .certificates-track {
-    animation: none;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: center;
+    animation: certificates-scroll 32s linear infinite !important;
+    flex-wrap: nowrap !important;
+    width: max-content !important;
+    justify-content: flex-start !important;
   }
+}
+
+
+/* FIX definitivo carrusel certificados */
+.certificates-slider {
+  overflow: hidden !important;
+  width: 100% !important;
+}
+
+.certificates-track {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  gap: 1.25rem !important;
+  width: max-content !important;
+  justify-content: flex-start !important;
+  animation: certificates-scroll 32s linear infinite !important;
+}
+
+.certificates-track > .certificate-card-wrap {
+  flex: 0 0 260px !important;
+  width: 260px !important;
+}
+
+.certificates-track--static {
+  animation: certificates-scroll 32s linear infinite !important;
+  flex-wrap: nowrap !important;
+  width: max-content !important;
+  justify-content: flex-start !important;
 }

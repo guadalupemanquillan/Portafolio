@@ -143,7 +143,7 @@ export const CertificatesSlider = () => {
         </p>
       ) : (
         <div className="certificates-slider">
-          <div className={`certificates-track${isAdmin ? " certificates-track--static" : ""}`}>
+          <div className="certificates-track">
             {trackItems.map((cert, i) => {
               const href = cardHref(cert);
               const isPdf = cert.mediaType === "pdf" || (cert.fileUrl && cert.fileUrl.toLowerCase().endsWith(".pdf"));
